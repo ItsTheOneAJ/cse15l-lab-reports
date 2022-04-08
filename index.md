@@ -20,3 +20,9 @@ Horizontal rule:
 print '3 backticks or'
 print 'indent 4 spaces'
 ```
+![Image](http://url/a.png)
+
+[Lab Report 1](https://ItsTheOneAJ.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
+[Lab Report 1](lab-report-1-week-2.html)
+
+Added this
