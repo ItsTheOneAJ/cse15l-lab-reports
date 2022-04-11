@@ -11,7 +11,7 @@
 
 
 ## Remotely Connecting: 
-![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports)
+![image](https://github.com/ItsTheOneAJ/jk/blob/main/Screenshot%202022-04-10%20234847.png)
 **Steps:**
 1. Find your CS 15L account name
 2. Enter ssh, and then account name + **@ieng6.ucsd.edu**
@@ -26,7 +26,7 @@
 
 
 ## Moving Files with `scp`: 
-![image]()
+![image](https://github.com/ItsTheOneAJ/jk/blob/main/Screenshot%202022-04-10%20234725.png)
 **Steps:**
 1. Create a file that is named WhereAmI.java in VS Code, then save it, once you've done that remotely connect to @ieng6.ucsd.edu
 2. enter scp WhereAmI.java "(your username)@ieng6.ucsd.edu:~/"
@@ -34,7 +34,7 @@
 
 
 ## Setting an SSH Key: 
-![image]()
+![image](https://github.com/ItsTheOneAJ/jk/blob/main/Screenshot%202022-04-10%20234542.png)
 **Steps:**
 1. Enter ssh-keygen on your computer, Enter file in which to save the key (/Users/<user-name>/.ssh/id_rsa): /Users/<user-name>/.ssh/id_rsa
 2. Click enter twice while putting nothing into the passpharase prompt
@@ -44,7 +44,7 @@
 
 
 ## Optimizing Remote Running: 
-![image]()
+![image](https://github.com/ItsTheOneAJ/jk/blob/main/Screenshot%202022-04-10%20232906.png)
 **Steps:**
 1. Enter scp WhereAmI.java (username)@ieng6.ucsd.edu:~/; ssh (username)@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI" 
 2.Enjoy the ease!
