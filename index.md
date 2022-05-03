@@ -1,28 +1,34 @@
-## Hola*aaaa*
-**Bold**
-# Heading 1
-[link to CSE 15L  schedule](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dreamstime.com%2Fphotos-images%2Fwater.html&psig=AOvVaw24NeyOJ82oi4Y8DS1okFzv&ust=1649525298710000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCKjfquH-hPcCFQAAAAAdAAAAABAD)
-> Blockquote
-* List
-* List
-* List
-1. One
-2. Two
-3. Three
+------
+# Lab Report 2
+------
+## 
+# Initial Error Found
+## New change:
 
-Horizontal rule:
+![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20222504.png)
 
----
-`Inline code` with backticks
+1. [Link](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/testTwo-copy.md) to the failure-induced input
+2. Screenshot for symptoms: 
+![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20220637.png)
+4. The scanner only searched to see if the end parenthesis wasnt there that it would break, but not if there was no open parenthesis. This created an infinite loop of searching the file until it overloaded the system. 
 
-```
-# code block
-print '3 backticks or'
-print 'indent 4 spaces'
-```
-![Image](http://url/a.png)
+# Second Error found
+## New Change: 
 
-[Lab Report 1](https://ItsTheOneAJ.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
-[Lab Report 1](lab-report-1-week-2.html)
+![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20222044.png)
+1. [Link](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/testTwo-copy.md) to the failure-induced input
+2. Screenshot for symptoms: 
+![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20220637.png)
+5. This change only checked if the brackets were both there, creating in ifinite loop to look for both the end/open parenthesis within the file. Overloading the file and creating a system break. 
 
-Added this
+# Third Error
+## New Change: 
+
+![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20215649.png)
+1. [Link](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/testTwo.md) to the failure-induced input
+2. Screenshot for symptoms: 
+![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20225443.png)
+4. The system could not recognize that there was a parenthesis and bracket within the link area, creating an improper break. It should have checked whether or not there was a close bracket after it and before a new open bracket to make sure that the link was correctly created.  
+
+
+-----
