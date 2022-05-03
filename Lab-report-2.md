@@ -5,27 +5,30 @@
 # Initial Error Found
 ## New change:
 
-![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20222044.png)
+![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20222504.png)
 
-1. [Link](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/testTwo%20copy.md) to the failure-induced input
-2. Screenshot for symptoms: ![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20220637.png)
-3. The system did could not find what it was looking for and overloaded the system with input. It was still looking for Brackets.
+1. [Link](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/testTwo-copy.md) to the failure-induced input
+2. Screenshot for symptoms: 
+![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20220637.png)
+4. The scanner only searched to see if the end parenthesis wasnt there that it would break, but not if there was no open parenthesis. This created an infinite loop of searching the file until it overloaded the system. 
 
 # Second Error found
 ## New Change: 
 
-![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20222504.png)
-1. [Link](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/testTwo%20copy.md) to the failure-induced input
-2. Screenshot for symptoms: ![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20220637.png)
-3. The system did could not find what it was looking for and overloaded the system with input. We thought it would only matter if the last bracket was not there.
+![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20222044.png)
+1. [Link](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/testTwo-copy.md) to the failure-induced input
+2. Screenshot for symptoms: 
+![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20220637.png)
+5. This change only checked if the brackets were both there, creating in ifinite loop to look for both the end/open parenthesis within the file. Overloading the file and creating a system break. 
 
 # Third Error
 ## New Change: 
 
 ![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20215649.png)
-1. [Link](https://github.com/ItsTheOneAJ/markdown-parser/blob/da4b5aab32b90e930e8210f631aabaf29147fe53/testTwo.md) to the failure-induced input
-2. Screenshot for symptoms: ![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20225443.png)
-3. The system did not recognize there was an error within the link. It has brackets and a parenesis within it, both cannot be a part of a link. 
+1. [Link](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/testTwo.md) to the failure-induced input
+2. Screenshot for symptoms: 
+![image](https://github.com/ItsTheOneAJ/markdown-parser/blob/main/Screenshot%202022-04-24%20225443.png)
+4. The system could not recognize that there was a parenthesis and bracket within the link area, creating an improper break. It should have checked whether or not there was a close bracket after it and before a new open bracket to make sure that the link was correctly created.  
 
 
 -----
