@@ -41,15 +41,21 @@
 
 ![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-08%20155207.png)
 
-2. 
+2. login to your ssh account and run the tests of your repository tests:
 
-![image]()
+![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-16%20194406.png)
 
-3. You can combine the two previous steps into one command using: ``scp -r *.java *.md lib/ alias from part 1+:markdown-parse; ssh + alias; 
+3. You can combine the two previous steps into one command using: ``scp -r *.java *.md lib/ alias from part 1+:markdown-parse; + ssh; + enter directory; + java; + and javac commands``
 
-![image]()
+![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-16%20194753.png)
+
+> Git Add: 
+
+![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/oie_BbE2FM0JcBAO.png)
 
 
+> Git Push: 
 
+![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-16%20195005.png)
 
 -----
