@@ -1,61 +1,75 @@
 ------
-# Lab Report 3
+# Markdown Switch With Group 5
 ------
-## 
-# Streamlining ssh Configuration
+> ### Our Groups [Markdown](https://github.com/aaronchan32/markdown-parser)
+> ### Group 5's [Markdown](https://github.com/httrieu/markdown-parser)
+### Test Cases for Snippet 1, 2, and 3: 
+![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-22%20140127.png)
+## Snippet 1
+#### Our group:
 
-1. While not signed into ssh, try entering ``~/.ssh/config`` which will look like: 
->If you change the phrase next to Host, then enter ``ssh + whatever is to the right of Host``
+![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-22%20140814.png)
+Expected: `[url.com, 'google.com, google.com]`
 
-![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-08%20124247.png)
+Output: `['google.com, google.com, ucsd.edu]`
 
-2. Next sign in using the next alias you created:
+> *Failure!!!*
+#### Group 5:
+![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-22%20141917.png)
+Expected: `[url.com, 'google.com, google.com, ucsd.edu]`
 
-![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-08%20122039.png)
+Output: `['google.com, google.com, ucsd.edu]`
 
-3. Then you can use ``scp`` to copy the file containing your alias
+> *Failure!!!*
+## Snippet 2
+#### Our group:
 
-![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-16%20190330.png)
+![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-22%20142504.png)
+Expected: `[a.com, a.com(()), example.com]`
 
-# Setup Github Access from ieng6
-1. Go to GitHub user account and check where your public key is stored:
+Output: `[a.com, a.com((, example.com]`
 
-![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-16%20190629.png)
+> *Failure!!!*
+#### Group 5:
+![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-22%20143010.png)
+Expected: `[a.com, a.com(()), example.com]`
 
-2. Check where it is stored within your own user account on ssh:
+Output: `[a.com, a.com((, example.com]`
 
-![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-16%20191503.png)
+> *Failure!!!*
+## Snippet 3
+#### Our group:
 
-3. Now check if your git commands work on ssh account:
+![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-22%20150009.png)
+Expected: `[]`
 
-![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-16%20191315.png)
+Output: `[https://ucsd-cse15l-w22.github.io/]`
 
-4. Result of Commiting from ssh account should look like this on github:
+> *Failure!!!*
+#### Group 5:
+![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-22%20150431.png)
+Expected: `[https://twiter.com, https://ucsd-cse15l-w22.github.io/]`
 
-![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-16%20191920.png)
+Output: `[https://ucsd-cse15l-w22.github.io]`
+
+> *Failure!!!*
+## Q&A:
+
+* Snippet 1: 
+
+Q: Do you think there is a small (<10 lines) code change that will make your program work for snippet 1 and all related cases that use inline code with backticks? If yes, describe the code change. If not, describe why it would be a more involved change.
+>A: **I believe that only a small portion of code is needed to fix this problem. If the end bracket comes before the start braket, then it should be a valid link.**
+* Snippet 2: 
+
+Q: Do you think there is a small (<10 lines) code change that will make your program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets? If yes, describe the code change. If not, describe why it would be a more involved change.
+>A: **This is a small change, if you are able to pop the extra brackets and parenthesis within the code. By checking if it has a closed bracket after a open, if there is another open then it will pop that if it is between an open and the closed bracket or parenthesis.**
+* Snippet 3: 
+
+Q: Do you think there is a small (<10 lines) code change that will make your program work for snippet 3 and all related cases that have newlines in brackets and parentheses? If yes, describe the code change. If not, describe why it would be a more involved change.
+>A: **A small change will help, it can check if there is a new line within the file, and if so trim the string it adds to the array.**
 
 
-# Copy whole directories with scp -r
-
-1. Enter ``scp -r *.java *.md lib/ alias from part 1+:markdown-parse`` which will copy the entire directory to you ieng6 account
-
-![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-08%20155207.png)
-
-2. login to your ssh account and run the tests of your repository tests:
-
-![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-16%20194406.png)
-
-3. You can combine the two previous steps into one command using: ``scp -r *.java *.md lib/ alias from part 1+:markdown-parse; + ssh; + enter directory; + java; + and javac commands``
-
-![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-16%20194753.png)
-
-> Git Add: 
-
-![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/oie_BbE2FM0JcBAO.png)
 
 
-> Git Push: 
 
-![image](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Screenshot%202022-05-16%20195005.png)
-
------
+------
