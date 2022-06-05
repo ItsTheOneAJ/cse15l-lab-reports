@@ -11,4 +11,6 @@
 
 [Lab 4:]()
 
+[Lab 5:](https://github.com/ItsTheOneAJ/cse15l-lab-reports/blob/main/Lab-report-5.md)
+
 ------
